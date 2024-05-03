@@ -12,8 +12,11 @@ setup(name='PingDing',
       packages=['PingDing'],
       package_dir={'PingDing':  '%s/src/' % here},
       install_requires=[
-          'subprocess',
-          'tkinter',
           'argparse'
-      ]
+      ],
+      entry_points={
+           'console_scripts': [
+               'PingDing = PingDing:main'
+           ]
+      }
     )

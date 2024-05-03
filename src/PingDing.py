@@ -2,7 +2,6 @@ import subprocess
 import threading
 import time
 import tkinter
-import argparse
 
 def getTimeS():
 	return time.time()
@@ -64,9 +63,4 @@ def constructMainWindow(tMax, addrs):
 	window.protocol('WM_DELETE_WINDOW', lambda : window.destroy())
 	window.mainloop()
 
-parser = argparse.ArgumentParser(description='Ping various IPs')
-parser.add_argument('tMax', help="at this time the box will be totally red", type=int)
-parser.add_argument('addr', nargs="*")
-
-constructMainWindow(float(parser.parse_args().tMax), parser.parse_args().addr)
 
