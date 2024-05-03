@@ -24,10 +24,13 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Install dependencies
+    - name: Create package
       run: |
         python -m pip install --upgrade pip
         python -m pip install setuptools wheel
-    - name: Build package
-      run: |
-        python3 setup.py bdist_wheel
+        python setup.py bdist_wheel
+    - name: Upload package
+      uses: actions/upload-artifact@v4
+      with:
+          name: PingDing wheel
+          path: dist/*
