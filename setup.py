@@ -1,8 +1,5 @@
 from setuptools import setup
-import pathlib
 
-here = pathlib.Path(__file__).parent.resolve()
-print(here)
 setup(name='PingDing',
       version='0.0.0',
       description='Graphically show ping result of various nodes',
@@ -10,7 +7,7 @@ setup(name='PingDing',
       author_email='',
       url='https://github.com/Troepje/PingDing',
       packages=['PingDing'],
-      package_dir={'PingDing':  '%s/src/' % here},
+      package_dir={'PingDing':  'src/'},
       install_requires=[
           'argparse'
       ],
