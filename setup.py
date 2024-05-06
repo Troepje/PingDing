@@ -6,9 +6,9 @@ print(here)
 setup(name='PingDing',
       version='0.0.0',
       description='Graphically show ping result of various nodes',
-      author='Bob',
+      author='Troepje',
       author_email='',
-      url='',
+      url='https://github.com/Troepje/PingDing',
       packages=['PingDing'],
       package_dir={'PingDing':  '%s/src/' % here},
       install_requires=[
