@@ -33,5 +33,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
           name: PingDing
-          path: dist/*
+          path: dist/*whl
           overwrite: true
